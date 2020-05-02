@@ -3,7 +3,7 @@ package goSession
 import (
 	"github.com/gorhill/cronexpr"
 	"github.com/satori/go.uuid"
-	"gosessions/core"
+	"github.com/lambdang/gosession/core"
 	"sync"
 	"time"
 )

@@ -6,7 +6,7 @@
 package goSession
 
 import (
-	"gosessions/core"
+	"github.com/lambdang/gosession/core"
 	"time"
 )
 

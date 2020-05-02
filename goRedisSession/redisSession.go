@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"github.com/gomodule/redigo/redis"
 	"github.com/json-iterator/go"
-	"gosessions/core"
+	"github.com/lambdang/gosession/core"
 	"time"
 )
 
