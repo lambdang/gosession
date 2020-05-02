@@ -7,7 +7,7 @@ package core
 
 type IManager interface {
 	NewSes(pk string) (ISession, error)
-	Get(sid string) ISession
+	GetSes(sid string) ISession
 	Destroy(sid string)
 	DestroyByPk(pk string)
 	Commit(session ISession)

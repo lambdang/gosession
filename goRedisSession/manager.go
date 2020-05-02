@@ -77,7 +77,7 @@ func (this *Manager) NewSes(pk string) (core.ISession, error) {
 
 //获取get 具有刷新机制
 //获取session 具有刷新机制 过了刷新期会更新sid
-func (this *Manager) Get(sid string) core.ISession {
+func (this *Manager) GetSes(sid string) core.ISession {
 	this.lock.Lock()
 	defer this.lock.Unlock()
 	ses, _ := this.redis.RGet(sid)

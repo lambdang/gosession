@@ -63,7 +63,7 @@ func (this *Manager) NewSes(pk string) (core.ISession, error) {
 }
 
 //获取session 具有刷新机制
-func (this *Manager) Get(sid string) core.ISession {
+func (this *Manager) GetSes(sid string) core.ISession {
 	this.lock.Lock()
 	defer this.lock.Unlock()
 
