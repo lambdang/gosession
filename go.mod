@@ -1,4 +1,4 @@
-module gosessions
+module github.com/lambdang/gosession
 
 go 1.13
 
