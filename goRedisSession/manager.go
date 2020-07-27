@@ -38,7 +38,7 @@ fleshTime: 刷新时间
 maxtime：最长有效期
 gcCron: 设定清理时间
  */
-func NewManage(host string, db int, prefix string, fleshTime int64, maxTime int64, gcCron string) core.IManager {
+func NewManager(host string, db int, prefix string, fleshTime int64, maxTime int64, gcCron string) core.IManager {
 
 	_sessionManager := &Manager{
 		redis:     NewRedis(host, db, prefix),
@@ -183,4 +183,11 @@ func (this *Manager) initPk() {
 		}
 	}
 
+}
+func(this *Manager)GetSession()map[string]core.ISession{
+	return nil
+}
+
+func(this *Manager)GetList()map[string]string{
+	return nil
 }

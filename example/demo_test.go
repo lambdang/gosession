@@ -43,3 +43,8 @@ func TestD(t *testing.T) {
 
 	//te	//fmt.Println(o.GetName())
 }
+
+func TestB(t *testing.T) {
+
+
+}

@@ -85,6 +85,7 @@ func (this *Manager) GetSes(sid string) core.ISession {
 		ses.SetSesId(newId)
 		delete(this.sessions, sid)
 		//ses.Update()
+		ses.UTime()
 		this.sessions[newId] = ses
 		if _pk := ses.GetPk(); _pk != "" {
 			this.pk[_pk] = newId
@@ -157,4 +158,16 @@ func (this *Manager) Gc() {
 
 		}
 	}
+}
+
+func(this *Manager)GetSession()map[string]core.ISession{
+	this.lock.RLock()
+	defer this.lock.RUnlock()
+	return this.sessions
+}
+
+func(this *Manager)GetList()map[string]string{
+	this.lock.RLock()
+	defer this.lock.RUnlock()
+	return this.pk
 }

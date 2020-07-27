@@ -12,6 +12,8 @@ type IManager interface {
 	DestroyByPk(pk string)
 	Commit(session ISession)
 	Gc()
+	GetSession() map[string]ISession
+	GetList() map[string]string
 }
 
 //NewSes(pk string) (*Session, error)
